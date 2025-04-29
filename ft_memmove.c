@@ -1,8 +1,46 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ratel <ratel@student.42.fr>                +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/04/29 11:17:05 by ratel             #+#    #+#             */
+/*   Updated: 2025/04/29 16:01:58 by ratel            ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <string.h>
 #include <stdio.h>
 
-//void *ft_memmove(void *dest, const void *src, size_t n)
+void *ft_memmove(void *dest, const void *src, size_t n)
+{
+	unsigned char	*dest_b;
+	const unsigned char	*src_b;
+	size_t	i;
 
+	dest_b = (unsigned char	*)dest;
+	src_b = (const unsigned char	*)src;
+	if (dest_b <= src_b)
+	{
+		i = 0;
+		while (i < n)
+		{
+			dest_b[i] = src_b[i];
+			i++;
+		}
+	}
+	else if (dest_b > src_b)
+	{
+		i = n;
+		while (i > 0)
+		{
+			i--;
+			dest_b[i] = src_b[i];
+		}	
+	}
+	return (dest);
+}
 int main()
 {
 	int	source[7] = {0, 1, 2, 3, 4, 5, 6};
