@@ -1,31 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   memchr.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: barmarti <barmarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/29 18:32:26 by barmarti          #+#    #+#             */
-/*   Updated: 2025/04/29 18:32:27 by barmarti         ###   ########.fr       */
+/*   Created: 2025/04/29 18:32:30 by barmarti          #+#    #+#             */
+/*   Updated: 2025/04/29 18:32:31 by barmarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
 #include <stdio.h>
 
-int ft_strlen(char *str)
+void *ft_memchr(const void *s, int c, size_t n)
 {
-	int i;
+	unsigned long	i;
+	unsigned char *haystack;
+	unsigned char *find;
 
+	haystack = (unsigned char *)s;
 	i = 0;
-	while(str[i] != '\0')
+	while (i < n && haystack[i])
+	{
+		if (haystack[i] == c)
+			return (find = &haystack[i]);
 		i++;
-	return i;
+	}
+	return(0);
 }
 
-int main(int argc, char **argv)
+int main() 
 {
-	printf("strlen = %d\n", strlen(argv[1]));
-	printf("ft_strlen = %d\n", ft_strlen(argv[1]));
+	char data[] = {'q', 'r', 's', 't', 'p', 'a', 'x'};
+	char *pos = ft_memchr(data, 't',7);
+
+	printf("pos[0] = %c\n", pos[0]);
+	printf("pos[1] = %c\n", pos[1]);
+
 	return 0;
-}
+ }

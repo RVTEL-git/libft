@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ratel <ratel@student.42.fr>                +#+  +:+       +#+        */
+/*   By: barmarti <barmarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/29 11:17:20 by ratel             #+#    #+#             */
-/*   Updated: 2025/04/29 11:17:22 by ratel            ###   ########.fr       */
+/*   Updated: 2025/04/30 21:53:07 by barmarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ void ft_bzero(void *s, size_t n)
 		n--;
 	}
 }
-
+/*
 int	main(void)
 {
 	char	buffer1[10] = "abcdefghi";
@@ -69,3 +69,4 @@ int	main(void)
 
 	return 0;
 }
+*/

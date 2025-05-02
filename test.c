@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   test.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rvtel <rvtel@student.42.fr>                +#+  +:+       +#+        */
+/*   By: barmarti <barmarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/25 16:13:12 by barmarti          #+#    #+#             */
-/*   Updated: 2025/04/25 21:50:29 by rvtel            ###   ########.fr       */
+/*   Updated: 2025/05/02 18:30:16 by barmarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,7 +65,7 @@ char	*ft_strnstr(const char *needle, const char *haystack, size_t len)
 
 int main(void)
 {
-
-
+	printf("max = %d\n", 2147483647);
+	printf("min = %d\n", -2147483647);
     return (0);
 }
