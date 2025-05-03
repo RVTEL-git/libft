@@ -6,23 +6,17 @@
 /*   By: barmarti <barmarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/29 11:17:24 by ratel             #+#    #+#             */
-/*   Updated: 2025/04/29 18:31:28 by barmarti         ###   ########.fr       */
+/*   Updated: 2025/05/03 18:46:19 by barmarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <ctype.h>
 #include <stdio.h>
 
-int ft_isalnum(int c)
+int	ft_isalnum( int character )
 {
-	if((c >= 48 && c <= 57) || (c >= 65 && c <= 90) || (c >= 97 && c <= 122))
-		return 1;
+	if ((c >= 48 && c <= 57) || (c >= 65 && c <= 90) || (c >= 97 && c <= 122))
+		return (1);
 	else
-		return 0;
-}
-
-void main(int argc, char **argv)
-{
-	printf("%d\n", ft_isalnum(argv[1][0]));
-	printf("%d\n", isalnum(argv[1][0]));
+		return (0);
 }

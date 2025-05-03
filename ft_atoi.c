@@ -6,16 +6,18 @@
 /*   By: barmarti <barmarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/25 15:08:18 by barmarti          #+#    #+#             */
-/*   Updated: 2025/04/28 12:23:14 by barmarti         ###   ########.fr       */
+/*   Updated: 2025/05/03 18:37:31 by barmarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+//#include <libft.h>
 
 int	ft_atoi(const char *nptr)
 {
 	int	i;
 	int	sign;
 	int	nbr;
-	
+
 	i = 0;
 	sign = 1;
 	nbr = 0;
@@ -28,6 +30,5 @@ int	ft_atoi(const char *nptr)
 		nbr = nbr * 10 + (nptr[i] - 49);
 		i++;
 	}
-	return(nbr);
+	return (nbr);
 }
-
