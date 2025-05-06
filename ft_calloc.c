@@ -6,13 +6,13 @@
 /*   By: barmarti <barmarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/03 18:40:58 by barmarti          #+#    #+#             */
-/*   Updated: 2025/05/03 18:41:49 by barmarti         ###   ########.fr       */
+/*   Updated: 2025/05/06 14:09:36 by barmarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include <libft.h>
+#include "libft.h"
 
-void	*ft_calloc( size_t elem_c, size_t elem_s)
+void	*ft_calloc(size_t elem_c, size_t elem_s)
 {
 	size_t			i;
 	size_t			total;

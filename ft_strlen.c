@@ -6,26 +6,18 @@
 /*   By: barmarti <barmarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/29 18:32:26 by barmarti          #+#    #+#             */
-/*   Updated: 2025/04/29 18:32:27 by barmarti         ###   ########.fr       */
+/*   Updated: 2025/05/06 14:11:24 by barmarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-#include <stdio.h>
+#include "libft.h"
 
-int ft_strlen(char *str)
+size_t	ft_strlen(const char *s)
 {
-	int i;
+	size_t	i;
 
 	i = 0;
-	while(str[i] != '\0')
+	while (s[i] != '\0')
 		i++;
-	return i;
-}
-
-int main(int argc, char **argv)
-{
-	printf("strlen = %d\n", strlen(argv[1]));
-	printf("ft_strlen = %d\n", ft_strlen(argv[1]));
-	return 0;
+	return (i);
 }

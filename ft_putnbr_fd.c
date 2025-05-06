@@ -1,22 +1,28 @@
-#include <stdio.h>
-#include <string.h>
-#include <unistd.h>
-#include <stdlib.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: barmarti <barmarti@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/05/06 10:47:03 by barmarti          #+#    #+#             */
+/*   Updated: 2025/05/06 14:26:15 by barmarti         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-void ft_putchar_fd(char c, int fd)
-{
-	write(fd, &c, 1);
-}
+#include "libft.h"
 
-void ft_putnbr_fd(int n, int fd)
+void	ft_putchar_fd(char c, int fd);
+
+void	ft_putnbr_fd(int n, int fd)
 {
-	long int nbr;
+	long int	nbr;
 
 	nbr = n;
 	if (nbr < 0)
 	{
-		ft_putchar('-');
-		nbr = nbr * - 1;
+		ft_putchar_fd('-', fd);
+		nbr = nbr * -1;
 	}
 	if (nbr < 10)
 		ft_putchar_fd(n + 48, fd);

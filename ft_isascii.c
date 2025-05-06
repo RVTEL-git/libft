@@ -6,17 +6,16 @@
 /*   By: barmarti <barmarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/29 18:32:01 by barmarti          #+#    #+#             */
-/*   Updated: 2025/04/29 18:32:07 by barmarti         ###   ########.fr       */
+/*   Updated: 2025/05/06 14:11:24 by barmarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <ctype.h>
-#include <stdio.h>
+#include "libft.h"
 
-int ft_isascii(int c)
+int	ft_isascii(int c)
 {
-	if(c >= 0 && c <= 127)
-		return 1;
+	if (c >= 0 && c <= 127)
+		return (1);
 	else
-		return 0;
+		return (0);
 }

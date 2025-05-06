@@ -1,23 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   memchr.c                                           :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: barmarti <barmarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/29 18:32:30 by barmarti          #+#    #+#             */
-/*   Updated: 2025/04/29 18:32:31 by barmarti         ###   ########.fr       */
+/*   Updated: 2025/05/06 14:11:24 by barmarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-#include <stdio.h>
+#include "libft.h"
 
-void *ft_memchr(const void *s, int c, size_t n)
+void	*ft_memchr(const void *s, int c, size_t n)
 {
 	unsigned long	i;
-	unsigned char *haystack;
-	unsigned char *find;
+	unsigned char	*haystack;
+	unsigned char	*find;
 
 	haystack = (unsigned char *)s;
 	i = 0;
@@ -27,16 +26,5 @@ void *ft_memchr(const void *s, int c, size_t n)
 			return (find = &haystack[i]);
 		i++;
 	}
-	return(0);
+	return (0);
 }
-
-int main() 
-{
-	char data[] = {'q', 'r', 's', 't', 'p', 'a', 'x'};
-	char *pos = ft_memchr(data, 't',7);
-
-	printf("pos[0] = %c\n", pos[0]);
-	printf("pos[1] = %c\n", pos[1]);
-
-	return 0;
- }

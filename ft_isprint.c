@@ -6,17 +6,16 @@
 /*   By: barmarti <barmarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/29 18:32:16 by barmarti          #+#    #+#             */
-/*   Updated: 2025/04/29 18:32:17 by barmarti         ###   ########.fr       */
+/*   Updated: 2025/05/06 14:11:24 by barmarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <ctype.h>
-#include <stdio.h>
+#include "libft.h"
 
-int ft_isprint(int c)
+int	ft_isprint(int c)
 {
-	if((c >= 0 && c <= 31) || c == 127)
-		return 0;
+	if ((c >= 0 && c <= 31) || c == 127)
+		return (0);
 	else
-		return 1;
+		return (1);
 }

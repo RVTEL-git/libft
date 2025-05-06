@@ -1,25 +1,27 @@
-#include <stdio.h>
-#include <string.h>
-#include <stdlib.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: barmarti <barmarti@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/05/06 10:53:56 by barmarti          #+#    #+#             */
+/*   Updated: 2025/05/06 14:31:09 by barmarti         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-int ft_strlen(char *str)
-{
-	int i;
+#include "libft.h"
 
-	i = 0;
-	while(str[i] != '\0')
-		i++;
-	return i;
-}
+size_t	ft_strlen(const char *s);
 
-char *ft_strmapi(char const *s, char (*f)(unsigned int, char))
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
 	unsigned int	i;
-	char	*dup;
+	char			*dup;
 
 	i = 0;
-	dup = (char *)malloc(sizeof(char) * (ft_strlen((char	*)s) + 1));
-	if(!dup)
+	dup = (char *)malloc(sizeof(char) * (ft_strlen((char *)s) + 1));
+	if (!dup)
 		return (NULL);
 	while (s[i])
 	{
@@ -27,17 +29,5 @@ char *ft_strmapi(char const *s, char (*f)(unsigned int, char))
 		i++;
 	}
 	dup[i] = '\0';
-	return(dup);
-}
-
-char	func(unsigned int i, char c)
-{
-	(void) i;
-	return (c + 1);
-}
-
-int	main()
-{
-	printf("%s",ft_strmapi("abc", func));
-	return (0);
+	return (dup);
 }
