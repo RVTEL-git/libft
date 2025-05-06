@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: barmarti <barmarti@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ratel <ratel@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/29 18:32:30 by barmarti          #+#    #+#             */
-/*   Updated: 2025/05/06 14:11:24 by barmarti         ###   ########.fr       */
+/*   Updated: 2025/05/06 20:53:49 by ratel            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,17 +14,16 @@
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {
-	unsigned long	i;
+	size_t			i;
 	unsigned char	*haystack;
-	unsigned char	*find;
 
 	haystack = (unsigned char *)s;
 	i = 0;
-	while (i < n && haystack[i])
+	while (i < n)
 	{
-		if (haystack[i] == c)
-			return (find = &haystack[i]);
+		if (haystack[i] == (unsigned char)c)
+			return (&haystack[i]);
 		i++;
 	}
-	return (0);
+	return (NULL);
 }

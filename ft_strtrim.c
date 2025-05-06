@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: barmarti <barmarti@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ratel <ratel@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/01 15:41:57 by barmarti          #+#    #+#             */
-/*   Updated: 2025/05/06 14:11:24 by barmarti         ###   ########.fr       */
+/*   Updated: 2025/05/06 20:56:28 by ratel            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlen(char const *str);
+size_t	ft_strlen(const char *s);
 
 char	*ft_dup(char const *src, int start, int end)
 {

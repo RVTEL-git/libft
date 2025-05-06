@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: barmarti <barmarti@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ratel <ratel@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/29 11:17:05 by ratel             #+#    #+#             */
-/*   Updated: 2025/05/06 14:11:24 by barmarti         ###   ########.fr       */
+/*   Updated: 2025/05/06 20:56:09 by ratel            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 		{
 			i--;
 			dest_b[i] = src_b[i];
-		}	
+		}
 	}
 	return (dest);
 }

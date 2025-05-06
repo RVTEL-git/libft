@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: barmarti <barmarti@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ratel <ratel@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/25 20:42:21 by rvtel             #+#    #+#             */
-/*   Updated: 2025/05/06 14:31:44 by barmarti         ###   ########.fr       */
+/*   Updated: 2025/05/06 20:36:55 by ratel            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*strnstr(const char *needle, const char *haystack, size_t len)
+char	*ft_strnstr(const char *needle, const char *haystack, size_t len)
 {
 	size_t	i;
 	size_t	j;
@@ -23,14 +23,11 @@ char	*strnstr(const char *needle, const char *haystack, size_t len)
 	while (j < len && haystack[j])
 	{
 		i = 0;
-		while (j < len && needle[i] == haystack[j] && needle[i])
-		{
+		while (j + i < len && haystack[j + i] == needle[i] && needle[i])
 			i++;
-			j++;
-		}
 		if (needle[i] == '\0')
-			return ((char *)&haystack[j - i]);
-		j = j - i + 1;
+			return ((char *)&haystack[j]);
+		j++;
 	}
-	return (0);
+	return (NULL);
 }
