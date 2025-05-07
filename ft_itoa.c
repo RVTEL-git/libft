@@ -3,18 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ratel <ratel@student.42.fr>                +#+  +:+       +#+        */
+/*   By: barmarti <barmarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/02 17:22:50 by barmarti          #+#    #+#             */
-/*   Updated: 2025/05/06 18:43:59 by ratel            ###   ########.fr       */
+/*   Updated: 2025/05/07 11:49:56 by barmarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strdup(char *src);
-
-int	get_baselen(int n)
+static int	get_baselen(int n)
 {
 	int	base_len;
 
@@ -39,6 +37,8 @@ char	*ft_itoa(int n)
 
 	if (n == -2147483648)
 		return (ft_strdup("-2147483648"));
+	if (n == 0)
+		return (ft_strdup("0"));
 	base_len = get_baselen(n);
 	result = (char *)malloc(sizeof(char) * (base_len + 1));
 	if (!result)
@@ -49,8 +49,6 @@ char	*ft_itoa(int n)
 		result[0] = '-';
 		n = -n;
 	}
-	if (n == 0)
-		return (ft_strdup("0"));
 	while (n > 0)
 	{
 		result[base_len - 1] = (n % 10) + 48;

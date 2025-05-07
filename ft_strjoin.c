@@ -3,16 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ratel <ratel@student.42.fr>                +#+  +:+       +#+        */
+/*   By: barmarti <barmarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/06 11:22:16 by barmarti          #+#    #+#             */
-/*   Updated: 2025/05/06 20:51:11 by ratel            ###   ########.fr       */
+/*   Updated: 2025/05/07 11:54:32 by barmarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-size_t	ft_strlen(const char *s);
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
@@ -25,17 +23,18 @@ char	*ft_strjoin(char const *s1, char const *s2)
 		return (NULL);
 	s1_len = ft_strlen(s1);
 	s2_len = ft_strlen(s2);
-	i = 0;
-	join = (char *)malloc(sizeof(char) * (s1_len + s2_len) + 1);
-	while (s1[i++])
+	i = -1;
+	join = (char *)malloc(sizeof(char) * (s1_len + s2_len + 1));
+	if (!join)
+		return (NULL);
+	while (s1[++i])
 		join[i] = s1[i];
-	i = 0;
-	while (i < s2_len)
+	i = -1;
+	while (s2[++i])
 	{
 		join[s1_len] = s2[i];
 		s1_len++;
-		i++;
 	}
-	join[s1_len + s2_len] = '\0';
+	join[s1_len] = '\0';
 	return (join);
 }
