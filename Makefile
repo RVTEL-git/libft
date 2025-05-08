@@ -6,12 +6,12 @@
 #    By: barmarti <barmarti@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/04/23 15:46:45 by cscache           #+#    #+#              #
-#    Updated: 2025/05/07 17:43:56 by barmarti         ###   ########.fr        #
+#    Updated: 2025/05/08 13:45:49 by barmarti         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CC = cc
-CFLAGS = -Wall -Wextra -Werror -Iincludes
+CFLAGS = -Wall -Wextra -Werror
 
 NAME = libft.a
 
@@ -27,7 +27,9 @@ ft_strtrim.c ft_substr.c ft_tolower.c ft_toupper.c
 
 OBJS = $(SRCS:.c=.o)
 
-SRCS_BONUS = ft_lstnew_bonus.c ft_lstadd_front_bonus.c
+SRCS_BONUS = ft_lstnew_bonus.c ft_lstadd_front_bonus.c ft_lstsize_bonus.c\
+ft_lstlast_bonus.c ft_lstadd_back_bonus.c ft_lstdelone_bonus.c ft_lstclear_bonus.c\
+ft_lstiter_bonus.c
 
 OBJS_BONUS = $(SRCS_BONUS:.c=.o)
 
@@ -50,4 +52,4 @@ fclean: clean
 
 re: fclean all
 	
-.PHONY: all clean fclean re
+.PHONY: all clean fclean re bonus
