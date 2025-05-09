@@ -6,7 +6,7 @@
 #    By: barmarti <barmarti@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/04/23 15:46:45 by cscache           #+#    #+#              #
-#    Updated: 2025/05/08 13:45:49 by barmarti         ###   ########.fr        #
+#    Updated: 2025/05/09 16:37:38 by barmarti         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -29,7 +29,7 @@ OBJS = $(SRCS:.c=.o)
 
 SRCS_BONUS = ft_lstnew_bonus.c ft_lstadd_front_bonus.c ft_lstsize_bonus.c\
 ft_lstlast_bonus.c ft_lstadd_back_bonus.c ft_lstdelone_bonus.c ft_lstclear_bonus.c\
-ft_lstiter_bonus.c
+ft_lstiter_bonus.c ft_lstmap_bonus.c
 
 OBJS_BONUS = $(SRCS_BONUS:.c=.o)
 
